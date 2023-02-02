@@ -4,7 +4,8 @@ import React from 'react';
 import './App.css';
 import Increment from './component/Increment';
 import Input from './component/Input';
-
+import Dropdown from './component/Dropdown';
+import 'typeface-nunito';
 //props => cara untuk mengirim data ke children component
 // parent App.js children Button
 
@@ -13,7 +14,9 @@ function App() {
   return (
     <>
       {/* <Increment /> */}
-      <Input />
+      {/* <Input /> */}
+      {/* <Dropdown /> */}
+      <Dropdown />
     </>
   );
 }

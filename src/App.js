@@ -1,22 +1,23 @@
 import React from 'react';
-// import Button, { Label } from './component/Button';
-// import LabelComponent from './component/Label';
+import { MantineProvider } from '@mantine/core';
 import './App.css';
-// import Increment from './component/Increment';
-// import Input from './component/Input';
-// import Dropdown from './component/Dropdown';
 import 'typeface-nunito';
 import MainLayout from './component/MainLayout';
-//props => cara untuk mengirim data ke children component
-// parent App.js children Button
+import AppContextProvider from './context';
 
-function App() {
 
+export default function App() {
   return (
-    <>
-      <MainLayout />
-    </>
+    <MantineProvider withGlobalStyles withNormalizeCSS
+      theme={{
+        fontFamily: 'Nunito Sans, sans-serif',
+      }}
+    >
+      <AppContextProvider>
+        <MainLayout>
+          <TodoLayout />
+        </MainLayout>
+      </AppContextProvider>
+    </MantineProvider>
   );
 }
-
-export default App;
